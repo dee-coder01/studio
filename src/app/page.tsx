@@ -2,12 +2,15 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="container mx-auto py-10">
-      <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white bg-clip-text text-transparent">
-        Find the Best Tyre Deals Online
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+      <h1 className="text-6xl font-bold text-center mb-8 gradient-heading">
+        TyreDeals
       </h1>
+      <p className="text-lg text-gray-400 text-center mb-12">
+        Find the best tyre deals online.
+      </p>
       {/* TODO: Implement Carousel Component */}
-      <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+      <div className="w-3/4 h-64 bg-gray-800 rounded-lg flex items-center justify-center">
         Placeholder for Tyre Carousel
       </div>
     </div>
