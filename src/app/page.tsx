@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 const Home = () => {
   const adminLocation = "New York"; // Static admin location
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(adminLocation)}`;
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
@@ -15,9 +16,14 @@ const Home = () => {
         Find the perfect tyres for your vehicle at unbeatable prices.
       </p>
        
-        <p className="text-sm text-muted-foreground text-center mb-8">
+        <a
+          href={googleMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-muted-foreground text-center mb-8 hover:text-primary transition-colors"
+        >
           Admin Location: {adminLocation}
-        </p>
+        </a>
        
       <div className="flex space-x-4">
         <Link href="/login" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2">

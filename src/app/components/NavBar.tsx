@@ -18,6 +18,7 @@ const NavBar = () => {
   const pathname = usePathname();
   const [open, setOpen] = React.useState(false);
   const adminLocation = "New York"; // Static admin location
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(adminLocation)}`;
 
   return (
     <nav className="bg-secondary p-4 flex items-center justify-between rounded-lg shadow-md backdrop-filter backdrop-blur-md">
@@ -61,9 +62,14 @@ const NavBar = () => {
       </Sheet>
 
       <div className="hidden md:flex space-x-4 items-center">
-        <span className="text-sm text-muted-foreground">
+        <a
+          href={googleMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-muted-foreground hover:text-primary transition-colors"
+        >
           Location: {adminLocation}
-        </span>
+        </a>
         <Link href="/tyres" className={`hover:text-primary transition-colors ${pathname === '/tyres' ? 'font-bold' : ''}`}>
           Tyres
         </Link>
