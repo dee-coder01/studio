@@ -13,14 +13,11 @@ const NavBar = () => {
         <Link href="/" className={`hover:text-teal-500 transition-colors ${pathname === '/' ? 'font-bold' : ''}`}>
           Home
         </Link>
-        <Link href="/tyres" className={`hover:text-teal-500 transition-colors ${pathname === '/tyres' ? 'font-bold' : ''}`}>
-          Tyres
+        <Link href="/login" className={`hover:text-teal-500 transition-colors ${pathname === '/login' ? 'font-bold' : ''}`}>
+          Login
         </Link>
-        <Link href="/contact" className={`hover:text-teal-500 transition-colors ${pathname === '/contact' ? 'font-bold' : ''}`}>
-          Contact Us
-        </Link>
-        <Link href="/about" className={`hover:text-teal-500 transition-colors ${pathname === '/about' ? 'font-bold' : ''}`}>
-          About Us
+        <Link href="/signup" className={`hover:text-teal-500 transition-colors ${pathname === '/signup' ? 'font-bold' : ''}`}>
+          Sign Up
         </Link>
       </div>
     </nav>
@@ -28,6 +25,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
-    

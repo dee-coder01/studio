@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -6,17 +7,19 @@ const Home = () => {
       <h1 className="text-6xl font-bold text-center mb-8 gradient-heading">
         TyreDeals
       </h1>
-      <p className="text-lg text-gray-400 text-center mb-12">
-        Find the best tyre deals online.
+      <p className="text-2xl text-gray-400 text-center mb-12">
+        Quality Tyres, Unbeatable Deals.
       </p>
-      {/* TODO: Implement Carousel Component */}
-      <div className="w-3/4 h-64 bg-gray-800 rounded-lg flex items-center justify-center">
-        Placeholder for Tyre Carousel
+      <div className="flex space-x-4">
+        <Link href="/login" className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Login
+        </Link>
+        <Link href="/signup" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          Sign Up
+        </Link>
       </div>
     </div>
   );
 };
 
 export default Home;
-
-    
