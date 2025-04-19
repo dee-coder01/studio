@@ -6,41 +6,41 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Button as ButtonShad } from "@/components/ui/button";
-import { Icon } from '@iconify/react';
+import { Github, Google } from 'lucide-react';
 
 const Login = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-background">
-      <Card className="w-full max-w-md bg-card shadow-lg rounded-lg overflow-hidden backdrop-filter backdrop-blur-md">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-700">
+      <Card className="w-full max-w-md bg-black/20 shadow-lg rounded-lg overflow-hidden backdrop-filter backdrop-blur-md">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">Login</CardTitle>
-          <CardDescription>Enter your credentials to access your account.</CardDescription>
+          <CardTitle className="text-2xl font-bold text-white">Login</CardTitle>
+          <CardDescription className="text-gray-300">Enter your credentials to access your account.</CardDescription>
         </CardHeader>
         <CardContent className="p-6">
           <form className="space-y-4">
             <div>
-              <Label htmlFor="username">Username</Label>
-              <Input type="text" id="username" placeholder="Username" className="mt-1" />
+              <Label htmlFor="username" className="text-gray-300">Username</Label>
+              <Input type="text" id="username" placeholder="Username" className="mt-1 bg-gray-700/50 text-gray-100 border-gray-600" />
             </div>
             <div>
-              <Label htmlFor="password">Password</Label>
-              <Input type="password" id="password" placeholder="Password" className="mt-1" />
+              <Label htmlFor="password" className="text-gray-300">Password</Label>
+              <Input type="password" id="password" placeholder="Password" className="mt-1 bg-gray-700/50 text-gray-100 border-gray-600" />
             </div>
           </form>
           <div className="flex justify-center items-center mt-4">
-            <ButtonShad variant="outline" className="mr-2">
-              <Icon icon="lucide:github" className="w-4 h-4 mr-2" />
+            <ButtonShad variant="outline" className="mr-2 text-gray-300 hover:text-white">
+              <Github className="w-4 h-4 mr-2" />
               Github
             </ButtonShad>
-            <ButtonShad variant="outline">
-              <Icon icon="lucide:google" className="w-4 h-4 mr-2" />
+            <ButtonShad variant="outline" className="text-gray-300 hover:text-white">
+              <Google className="w-4 h-4 mr-2" />
               Google
             </ButtonShad>
           </div>
         </CardContent>
         <CardFooter className="flex justify-between p-6">
-          <Button>Sign In</Button>
-          <a className="text-sm text-muted-foreground hover:text-primary" href="/signup">
+          <Button className="bg-teal-500 hover:bg-teal-600 text-white">Sign In</Button>
+          <a className="text-sm text-gray-300 hover:text-teal-500 transition-colors" href="/signup">
             Don't have an account? Sign Up!
           </a>
         </CardFooter>
