@@ -5,11 +5,16 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { Button as ButtonShad } from "@/components/ui/button";
+import {
+  Github,
+  Google,
+} from 'lucide-react';
 
 const SignUp = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-background">
-      <Card className="w-full max-w-md bg-card shadow-lg backdrop-filter backdrop-blur-md rounded-lg overflow-hidden">
+      <Card className="w-full max-w-md bg-card shadow-lg rounded-lg overflow-hidden border">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Sign Up</CardTitle>
           <CardDescription>Create an account to start shopping.</CardDescription>
@@ -29,6 +34,16 @@ const SignUp = () => {
               <Input type="password" id="password" placeholder="Password" className="mt-1" />
             </div>
           </form>
+          <div className="flex justify-center items-center mt-4">
+            <ButtonShad variant="outline" className="mr-2">
+              <Github className="w-4 h-4 mr-2" />
+              Github
+            </ButtonShad>
+            <ButtonShad variant="outline">
+              <Google className="w-4 h-4 mr-2" />
+              Google
+            </ButtonShad>
+          </div>
         </CardContent>
         <CardFooter className="flex justify-between p-6">
           <Button>Create Account</Button>

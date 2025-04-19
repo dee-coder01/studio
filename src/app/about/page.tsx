@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 const AboutUs = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-background">
-      <Card className="w-full max-w-md bg-card shadow-lg backdrop-filter backdrop-blur-md rounded-lg overflow-hidden">
+      <Card className="w-full max-w-md bg-card shadow-lg rounded-lg overflow-hidden border">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">About Us</CardTitle>
           <CardDescription>Learn more about our mission and team.</CardDescription>
