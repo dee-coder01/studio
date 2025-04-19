@@ -3,19 +3,20 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Wheel } from 'lucide-react';
 
 const NavBar = () => {
   const pathname = usePathname();
 
   return (
     <nav className="bg-secondary p-4">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between flex-wrap md:flex-nowrap">
         <div className="flex items-center">
-          <Link href="/" className="text-foreground font-bold text-xl">
-            TyreDeals
+          <Link href="/" className="text-foreground font-bold text-xl mr-4">
+             <Wheel className="inline-block h-6 w-6 mr-1" />
           </Link>
         </div>
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 items-center">
           <Link href="/tyres" className={`hover:text-primary transition-colors ${pathname === '/tyres' ? 'font-bold' : ''}`}>
             Tyres
           </Link>

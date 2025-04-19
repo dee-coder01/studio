@@ -5,13 +5,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Button as ButtonShad } from "@/components/ui/button";
-import { Github } from 'lucide-react';
-import { Mail } from 'lucide-react'; // Using Mail as a placeholder for Google, replace with appropriate icon if available
+import { Icons } from "@/components/icons";
+import { cn } from "@/lib/utils";
 
 const SignUp = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-700">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-900 to-gray-700 p-4">
       <Card className="w-full max-w-md bg-black/20 shadow-lg rounded-lg overflow-hidden backdrop-filter backdrop-blur-md">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-white">Sign Up</CardTitle>
@@ -33,14 +32,14 @@ const SignUp = () => {
             </div>
           </form>
           <div className="flex justify-center items-center mt-4">
-            <ButtonShad variant="outline" className="mr-2 text-gray-300 hover:text-white">
-              <Github className="w-4 h-4 mr-2" />
+            <Button variant="outline" className="mr-2 text-gray-300 hover:text-white">
+              <Icons.github className="w-4 h-4 mr-2" />
               Github
-            </ButtonShad>
-            <ButtonShad variant="outline" className="text-gray-300 hover:text-white">
-              <Mail className="w-4 h-4 mr-2" /> {/* Replace Mail with Google icon if available */}
+            </Button>
+            <Button variant="outline" className="text-gray-300 hover:text-white">
+              <Icons.google className="w-4 h-4 mr-2" />
               Google
-            </ButtonShad>
+            </Button>
           </div>
         </CardContent>
         <CardFooter className="flex justify-between p-6">

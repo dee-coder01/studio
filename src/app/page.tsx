@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { Icons } from "@/components/icons";
+import { Wheel } from 'lucide-react';
 
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
         Your Journey Starts Here.
       </h1>
       <p className="text-lg md:text-xl text-muted-foreground text-center mb-12">
