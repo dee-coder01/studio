@@ -1,20 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
+import { Icons } from "@/components/icons";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-white">
-      <h1 className="text-6xl font-bold text-center mb-8 gradient-heading">
-        TyreDeals
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
+        Your Journey Starts Here.
       </h1>
-      <p className="text-2xl text-gray-400 text-center mb-12">
-        Quality Tyres, Unbeatable Deals.
+      <p className="text-lg md:text-xl text-muted-foreground text-center mb-12">
+        Find the perfect tyres for your vehicle at unbeatable prices.
       </p>
       <div className="flex space-x-4">
-        <Link href="/login" className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        <Link href="/login" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2">
           Login
         </Link>
-        <Link href="/signup" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        <Link href="/signup" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2">
           Sign Up
         </Link>
       </div>

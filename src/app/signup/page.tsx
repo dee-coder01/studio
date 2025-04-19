@@ -1,55 +1,42 @@
+"use client";
+
 import React from 'react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 const SignUp = () => {
   return (
-    <div className="container mx-auto py-10">
-      <h1 className="text-3xl font-bold mb-6">Sign Up</h1>
-      <form className="max-w-lg mx-auto">
-        <div className="mb-4">
-          <label htmlFor="username" className="block text-gray-700 text-sm font-bold mb-2">
-            Username
-          </label>
-          <input
-            type="text"
-            id="username"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Username"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Email"
-          />
-        </div>
-        <div className="mb-6">
-          <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Password"
-          />
-        </div>
-        <div className="flex items-center justify-between">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="button"
-          >
-            Create Account
-          </button>
-          <a className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/login">
+    <div className="flex justify-center items-center min-h-screen bg-background">
+      <Card className="w-full max-w-md bg-card shadow-lg backdrop-filter backdrop-blur-md rounded-lg overflow-hidden">
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold">Sign Up</CardTitle>
+          <CardDescription>Create an account to start shopping.</CardDescription>
+        </CardHeader>
+        <CardContent className="p-6">
+          <form className="space-y-4">
+            <div>
+              <Label htmlFor="username">Username</Label>
+              <Input type="text" id="username" placeholder="Username" className="mt-1" />
+            </div>
+            <div>
+              <Label htmlFor="email">Email</Label>
+              <Input type="email" id="email" placeholder="Email" className="mt-1" />
+            </div>
+            <div>
+              <Label htmlFor="password">Password</Label>
+              <Input type="password" id="password" placeholder="Password" className="mt-1" />
+            </div>
+          </form>
+        </CardContent>
+        <CardFooter className="flex justify-between p-6">
+          <Button>Create Account</Button>
+          <a className="text-sm text-muted-foreground hover:text-primary" href="/login">
             Already have an account? Login!
           </a>
-        </div>
-      </form>
+        </CardFooter>
+      </Card>
     </div>
   );
 };
