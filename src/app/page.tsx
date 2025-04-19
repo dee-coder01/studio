@@ -1,3 +1,17 @@
-export default function Home() {
-  return <></>;
-}
+import React from 'react';
+
+const Home = () => {
+  return (
+    <div className="container mx-auto py-10">
+      <h1 className="text-4xl font-bold text-center mb-8">
+        Find the Best Tyre Deals Online
+      </h1>
+      {/* TODO: Implement Carousel Component */}
+      <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+        Placeholder for Tyre Carousel
+      </div>
+    </div>
+  );
+};
+
+export default Home;
