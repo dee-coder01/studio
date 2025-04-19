@@ -13,6 +13,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Navigation } from 'lucide-react';
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -62,14 +64,6 @@ const NavBar = () => {
       </Sheet>
 
       <div className="hidden md:flex space-x-4 items-center">
-        <a
-          href={googleMapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm text-muted-foreground hover:text-primary transition-colors"
-        >
-          Location: {adminLocation}
-        </a>
         <Link href="/tyres" className={`hover:text-primary transition-colors ${pathname === '/tyres' ? 'font-bold' : ''}`}>
           Tyres
         </Link>
@@ -85,6 +79,16 @@ const NavBar = () => {
         <Link href="/signup" className={`hover:text-primary transition-colors ${pathname === '/signup' ? 'font-bold' : ''}`}>
           Sign Up
         </Link>
+        <Button asChild>
+          <Link
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center"
+          >
+            <Navigation className="mr-2 h-4 w-4" /> Find Me
+          </Link>
+        </Button>
       </div>
     </nav>
   );
