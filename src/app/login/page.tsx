@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Button as ButtonShad } from "@/components/ui/button";
-import { Github, Google } from 'lucide-react';
+import { Github, Mail } from 'lucide-react'; // Using Mail as a placeholder for Google, replace with appropriate icon if available
 
 const Login = () => {
   return (
@@ -33,7 +33,7 @@ const Login = () => {
               Github
             </ButtonShad>
             <ButtonShad variant="outline" className="text-gray-300 hover:text-white">
-              <Google className="w-4 h-4 mr-2" />
+              <Mail className="w-4 h-4 mr-2" /> {/* Replace Mail with Google icon if available */}
               Google
             </ButtonShad>
           </div>
