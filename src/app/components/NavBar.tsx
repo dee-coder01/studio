@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Menu } from 'lucide-react';
 import {
   Sheet,
@@ -18,9 +18,19 @@ import { Navigation } from 'lucide-react';
 
 const NavBar = () => {
   const pathname = usePathname();
+    const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const adminLocation = "New York"; // Static admin location
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(adminLocation)}`;
+
+  const [isLoggedIn, setIsLoggedIn] = React.useState(false); // Track login status
+
+    // Function to handle logout
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+        router.push('/'); // Redirect to home page after logout
+    };
+
 
   return (
     <nav className="bg-secondary p-4 flex items-center justify-between rounded-lg shadow-md backdrop-filter backdrop-blur-md">
@@ -53,12 +63,21 @@ const NavBar = () => {
             <Link href="/about" className={`hover:text-primary transition-colors ${pathname === '/about' ? 'font-bold' : ''}`}>
               About Us
             </Link>
-            <Link href="/login" className={`hover:text-primary transition-colors ${pathname === '/login' ? 'font-bold' : ''}`}>
-              Login
-            </Link>
-            <Link href="/signup" className={`hover:text-primary transition-colors ${pathname === '/signup' ? 'font-bold' : ''}`}>
-              Sign Up
-            </Link>
+              {!isLoggedIn && (
+                  <>
+                      <Link href="/login" className={`hover:text-primary transition-colors ${pathname === '/login' ? 'font-bold' : ''}`}>
+                          Login
+                      </Link>
+                      <Link href="/signup" className={`hover:text-primary transition-colors ${pathname === '/signup' ? 'font-bold' : ''}`}>
+                          Sign Up
+                      </Link>
+                  </>
+              )}
+              {isLoggedIn && (
+                  <Button variant="ghost" onClick={handleLogout}>
+                      Logout
+                  </Button>
+              )}
           </div>
         </SheetContent>
       </Sheet>
@@ -73,12 +92,21 @@ const NavBar = () => {
         <Link href="/about" className={`hover:text-primary transition-colors ${pathname === '/about' ? 'font-bold' : ''}`}>
           About Us
         </Link>
-        <Link href="/login" className={`hover:text-primary transition-colors ${pathname === '/login' ? 'font-bold' : ''}`}>
-          Login
-        </Link>
-        <Link href="/signup" className={`hover:text-primary transition-colors ${pathname === '/signup' ? 'font-bold' : ''}`}>
-          Sign Up
-        </Link>
+          {!isLoggedIn && (
+              <>
+                  <Link href="/login" className={`hover:text-primary transition-colors ${pathname === '/login' ? 'font-bold' : ''}`}>
+                      Login
+                  </Link>
+                  <Link href="/signup" className={`hover:text-primary transition-colors ${pathname === '/signup' ? 'font-bold' : ''}`}>
+                      Sign Up
+                  </Link>
+              </>
+          )}
+          {isLoggedIn && (
+              <Button variant="ghost" onClick={handleLogout}>
+                  Logout
+              </Button>
+          )}
         <Button asChild>
           <Link
             href={googleMapsUrl}
