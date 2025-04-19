@@ -5,17 +5,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Icons } from "@/components/icons";
 import { Button as ButtonShad } from "@/components/ui/button";
-import {
-  Github,
-  Google,
-} from 'lucide-react';
+import { Icon } from '@iconify/react';
 
 const Login = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-background">
-      <Card className="w-full max-w-md bg-card shadow-lg rounded-lg overflow-hidden border">
+      <Card className="w-full max-w-md bg-card shadow-lg rounded-lg overflow-hidden backdrop-filter backdrop-blur-md">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Login</CardTitle>
           <CardDescription>Enter your credentials to access your account.</CardDescription>
@@ -33,11 +29,11 @@ const Login = () => {
           </form>
           <div className="flex justify-center items-center mt-4">
             <ButtonShad variant="outline" className="mr-2">
-              <Github className="w-4 h-4 mr-2" />
+              <Icon icon="lucide:github" className="w-4 h-4 mr-2" />
               Github
             </ButtonShad>
             <ButtonShad variant="outline">
-              <Google className="w-4 h-4 mr-2" />
+              <Icon icon="lucide:google" className="w-4 h-4 mr-2" />
               Google
             </ButtonShad>
           </div>
