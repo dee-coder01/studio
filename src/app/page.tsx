@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useToast } from "@/hooks/use-toast";
-import { Navigation } from 'lucide-react';
+import {Navigation} from "lucide-react";
 
 const Home = () => {
   const adminLocation = "New York"; // Static admin location
@@ -19,18 +19,6 @@ const Home = () => {
         Find the perfect tyres for your vehicle at unbeatable prices.
       </p>
 
-      {/* New Section for "Find Me" CTA */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-center mb-4">Need Help?</h2>
-        <Link
-          href={googleMapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2"
-        >
-          <Navigation className="mr-2 h-4 w-4" /> Find Me
-        </Link>
-      </section>
 
       <div className="flex space-x-4">
         <Link href="/login" className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2">
@@ -40,6 +28,18 @@ const Home = () => {
           Sign Up
         </Link>
       </div>
+        {/* New Section for "Find Me" CTA */}
+        <section className="mt-8">
+            <h2 className="text-2xl font-semibold text-center mb-4">Need Help?</h2>
+            <Link
+                href={googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2"
+            >
+                <Navigation className="mr-2 h-4 w-4" /> Find Me
+            </Link>
+        </section>
     </div>
   );
 };
