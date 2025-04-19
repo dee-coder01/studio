@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Icons } from "@/components/icons";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -11,9 +10,11 @@ const NavBar = () => {
   return (
     <nav className="bg-secondary p-4">
       <div className="container mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center text-foreground hover:text-primary transition-colors">
-          <Icons.tyre className="h-6 w-6 mr-2" />
-        </Link>
+        <div className="flex items-center">
+          <Link href="/" className="text-foreground font-bold text-xl">
+            TyreDeals
+          </Link>
+        </div>
         <div className="flex space-x-4">
           <Link href="/tyres" className={`hover:text-primary transition-colors ${pathname === '/tyres' ? 'font-bold' : ''}`}>
             Tyres

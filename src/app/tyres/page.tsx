@@ -23,4 +23,3 @@ const Tyres = () => {
 };
 
 export default Tyres;
-/
