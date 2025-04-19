@@ -8,7 +8,7 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-gray-300 p-4">
+    <nav className="bg-gray-100 p-4">
       <div className="container mx-auto flex justify-around items-center">
         <Link href="/" className={`hover:text-teal-500 transition-colors ${pathname === '/' ? 'font-bold' : ''}`}>
           Home
@@ -28,3 +28,6 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
+    

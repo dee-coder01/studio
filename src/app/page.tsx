@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen text-white">
       <h1 className="text-6xl font-bold text-center mb-8 gradient-heading">
         TyreDeals
       </h1>
@@ -18,3 +18,5 @@ const Home = () => {
 };
 
 export default Home;
+
+    
